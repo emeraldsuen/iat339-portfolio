@@ -1,0 +1,125 @@
+body {
+  background-color: black;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: white;
+}
+
+@font-face {
+  font-family: "Maison Neue Mono";
+  src: url("/fonts/Maison Neue Mono.otf") format("otf");
+}
+
+.styleguide-container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.default-styleguide {
+  font-family: "Arial", sans-serif;
+}
+
+/* TYPE ELEMENTS */
+.big-type {
+  font-size: 6em;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+}
+
+.med-type {
+  /* font-family: "Maison Neue Mono", monospace; */
+  font-size: 2em;
+  color: #ffc83e;
+}
+
+.body-type {
+  color: white;
+  font-family: Maison Neue Mono, monospace;
+  font-size: 10pt;
+  line-height: 1.5em;
+}
+
+.ordered-list {
+  color: white;
+  font-family: Maison Neue Mono, monospace;
+  font-size: 8pt;
+  line-height: 1.5em;
+}
+
+/* NAVIGATION */
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Maison Neue Mono", monospace;
+  transition: color 1s linear, text-decoration-color 1s linear;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  /* background-color: #ddd; */
+  /* color: black; */
+  text-decoration: underline;
+  text-decoration-color: #ffc83e;
+  color: #ffc83e;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  /* border-bottom: 2px solid white; */
+}
+
+/* in-text links */
+.in-text-link {
+  text-decoration: none;
+  /* color: #ffc83e; */
+  color: white;
+  border-bottom: 1px solid white;
+  background-color: black;
+  transition: background-color 1s linear, color 1s linear, border-bottom 1s linear;
+  margin-top: 0.25em;
+  padding-top: 0.25em;
+}
+
+.in-text-link:hover {
+  color: black;
+  background-color: #ffc83e;
+  margin-top: 0.25em;
+  padding-top: 0.25em;
+  border-color: black;
+}
+
+/* navigation buttons */
+.nav-button {
+  padding: 1em;
+  font-family: "Maison Neue Mono", monospace;
+  color: black;
+  background-color: white;
+  /* border-color: #ffc83e; */
+  /* border-width: 5px; */
+  /* border-style: solid; */
+  border: none;
+  transition: background-color 1s ease;
+}
+
+.nav-button:hover {
+  /* border-color: white; */
+  background-color: #ffc83e;
+}
+
+.image {
+  /* border: 4px solid white; */
+}
