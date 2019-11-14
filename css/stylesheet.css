@@ -123,3 +123,63 @@ body {
 .image {
   /* border: 4px solid white; */
 }
+
+.horizonal {
+  transform: rotate(-90deg);
+}
+
+.page-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.project-intro {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.process-step {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.img-center {
+  text-align: center;
+}
+
+.proj-img {
+  max-width: 100%;
+  image-orientation: from-image;
+}
+
+.logo {
+  max-height: 500px;
+}
+
+.accordion {
+  background-color: #000;
+  color: #ffc83e;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid white;
+  outline: none;
+  transition: 0.4s;
+  /* font-family: 'Playfair Display', serif; */
+  font-family: "Maison Neue Mono", monospace;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.process-step .active, .accordion:hover {
+  background-color: #ffc83e;
+  color: white;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 1em 1em;
+  background-color: black;
+  display: none;
+  overflow: hidden;
+}
