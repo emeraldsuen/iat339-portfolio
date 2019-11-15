@@ -3,6 +3,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   color: white;
+  margin: 0;
 }
 
 @font-face {
@@ -10,6 +11,7 @@ body {
   src: url("/fonts/Maison Neue Mono.otf") format("otf");
 }
 
+/* STYLEGUIDE STYLING */
 .styleguide-container {
   margin: 0 auto;
   width: 80%;
@@ -19,6 +21,7 @@ body {
   font-family: "Arial", sans-serif;
 }
 
+/* COLOR PALETTE */
 .colors {
   display: flex;
   flex-direction: row;
@@ -26,6 +29,7 @@ body {
   font-family: "Maison Neue Mono", monospace;
 }
 
+/* black */
 .color1 {
   width: 33%;
   height: 5em;
@@ -33,6 +37,7 @@ body {
   border: 1px solid white;
 }
 
+/* white */
 .color2 {
   width: 33%;
   height: 5em;
@@ -45,6 +50,7 @@ body {
   padding-bottom: 1em;
 }
 
+/* gold */
 .color3 {
   width: 33%;
   height: 5em;
@@ -78,6 +84,11 @@ body {
   font-family: Maison Neue Mono, monospace;
   font-size: 8pt;
   line-height: 1.5em;
+}
+
+.yellow-text {
+  color: #fff;
+  opacity: 0.7;
 }
 
 /* NAVIGATION */
@@ -207,6 +218,11 @@ body {
   font-family: "Maison Neue Mono", monospace;
 }
 
+.accordion-expand {
+  display: inline-block;
+  float: right;
+}
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .process-step .active, .accordion:hover {
   background-color: #ffc83e;
@@ -275,6 +291,11 @@ textarea:hover, textarea:focus {
   background-color: black;
   /* border: 1px solid rgba(0, 0, 0, 0.2); */
   padding-bottom: 10px;
+  padding: 0.5em;
+}
+
+.navbar a.active {
+  color: #ffc83e !important;
 }
 
 #main-nav {
@@ -316,13 +337,14 @@ textarea:hover, textarea:focus {
   color: rgba(255, 255, 255, 0.8);
   font-size: 24px;
   transition: color 0.2s linear;
+  padding: 0.25em;
 }
 
 #navbar-toggle:hover {
   color: #ffc83e;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .navbar {
     display: flex;
     justify-content: space-between;

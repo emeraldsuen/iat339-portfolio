@@ -18,8 +18,7 @@
     <a href="index.html" id="logo">karmen suen
       <!--<img src="img/logo.png" width="30px">--></a>
     <ul id="main-nav">
-      <!-- <li><a href="index.html" class="nav-links">Home</a></li> -->
-      <li><a href="typographic-space.html" class="nav-links">Typographic Space</a></li>
+      <li><a href="typographic-space.html" class="nav-links active">Typographic Space</a></li>
       <li><a href="dva.html" class="nav-links">D.Va</a></li>
       <li><a href="about.html" class="nav-links">About</a></li>
       <li><a href="styleguide.html" class="nav-links">Styleguide</a></li>
@@ -38,7 +37,7 @@
 
   <div class="page-container">
     <div class="page-title">
-      <h1 class="big-type horizontal">typographic space</h1>
+      <h1 class="big-type horizontal" id="h1">typographic space</h1>
     </div>
 
     <!-- PROJECT INTRO -->
@@ -49,25 +48,37 @@
       </div>
       <p class="body-text yellow-text">Typographic Space is an academic project that focuses on the geometric typeface, Avenir. A mock magazine was created that features four different graphical layouts that:
       </p>
-      <ol class="ordered-list">
+      <ol class="ordered-list yellow-text">
         <li>Rely solely on type</li>
         <li>Includes typographic elements</li>
         <li>Introduces a secondary typeface</li>
         <li>Features extreme size and weight contrast</li>
       </ol>
-      <p class="body-text">Dieter Rams’ 10 Principles for Good Design is the content of these layouts and are reflected in my design. </p>
+      <p class="body-text yellow-text">Dieter Rams’ <em>10 Principles for Good Design</em> is the content of these layouts and are reflected in my design. </p>
     </div>
 
     <!-- ROUGHS -->
     <div class="process-step">
       <p class="med-type">Roughs</p>
-      <div class="img-center">
-        <img src="img/roughs.png" class="proj-img" alt="roughs">
-      </div>
+
       <p class="body-text">As this project is typography based, working directly on Adobe Illustrator allowed me to quickly adjust placement, sizing, and orientation. The above images are only a small portion of the exploration I have done
         through
         my ideation phase.
       </p>
+      <div class="img-center">
+        <img src="img/roughs.png" class="proj-img" alt="roughs">
+        <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+      </div>
     </div>
 
     <!-- MOCKUPS -->
@@ -85,7 +96,10 @@
     <!-- FINAL LAYOUTS -->
     <div class="process-step">
       <p class="med-type">Final Layouts</p>
-      <button class="accordion">Layout 1</button>
+      <button class="accordion">Layout 1
+        <i class="fas fa-plus accordion-expand"></i>
+        <!-- <i class="fas fa-chevron-down accordion-expand"></i> -->
+      </button>
       <div class="panel">
         <div class="img-center">
           <img src="img/layout1.png" class="proj-img" alt="layout1">
@@ -96,7 +110,10 @@
         </p>
       </div>
 
-      <button class="accordion">Layout 2</button>
+      <button class="accordion">Layout 2
+        <i class="fas fa-plus accordion-expand"></i>
+        <!-- <i class="fas fa-chevron-down accordion-expand"></i> -->
+      </button>
       <div class="panel">
         <div class="img-center">
           <img src="img/layout2.png" class="proj-img" alt="layout2">
@@ -107,7 +124,10 @@
         </p>
       </div>
 
-      <button class="accordion">Layout 3</button>
+      <button class="accordion">Layout 3
+        <i class="fas fa-plus accordion-expand"></i>
+        <!-- <i class="fas fa-chevron-down accordion-expand"></i> -->
+      </button>
       <div class="panel">
         <div class="img-center">
           <img src="img/layout3.png" class="proj-img" alt="layout3">
@@ -118,7 +138,10 @@
         </p>
       </div>
 
-      <button class="accordion">Layout 4</button>
+      <button class="accordion">Layout 4
+        <i class="fas fa-plus accordion-expand"></i>
+        <!-- <i class="fas fa-chevron-down accordion-expand"></i> -->
+      </button>
       <div class="panel">
         <div class="img-center">
           <img src="img/layout4.png" class="proj-img" alt="layout4">
@@ -153,23 +176,6 @@
 
   </div>
 
-  <!-- <div class="project-container">
-    <div>
-      <h1 class="big-type">typographic space</h1>
-    </div>
-    <div class="project-content">
-      <p class="body-text yellow-text">Typographic Space is an academic project that focuses on the geometric typeface, Avenir. I was instructed to create four different graphical layouts that:
-      </p>
-      <ol class="ordered-list">
-        <li>Rely solely on type</li>
-        <li>Includes typographic elements</li>
-        <li>Introduces a secondary typeface</li>
-        <li>Features extreme size and weight contrast</li>
-      </ol>
-
-    </div>
-  </div> -->
-
   <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
@@ -193,6 +199,32 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous">
   </script>
   <script src="js/main.js"></script>
+  <script>
+    // Get the H1 heading
+    var h1 = document.querySelector('h1');
+
+    // Get it's position in the viewport
+    var bounding = h1.getBoundingClientRect();
+
+    // Log the results
+    console.log(bounding);
+
+    var isInViewport = function(elem) {
+      var bounding = h1.getBoundingClientRect();
+      return (
+        // checks if the element is visible at all
+        bounding.bottom > 0
+      );
+    };
+
+    window.addEventListener('scroll', function(event) {
+      if (isInViewport(h1)) {
+        console.log('In the viewport!');
+      } else {
+        console.log('Not in the viewport... whomp whomp');
+      }
+    }, false);
+  </script>
 
 </body>
 

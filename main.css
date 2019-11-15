@@ -110,7 +110,7 @@ body {
 }
 
 /* navbar stuff */
-.navbar {
+/* .navbar {
   font-size: 18px;
   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -190,4 +190,4 @@ body {
   #navbar-toggle {
     display: none;
   }
-}
+} */
