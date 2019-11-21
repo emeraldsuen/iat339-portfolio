@@ -66,7 +66,7 @@
         my ideation phase.
       </p>
       <div class="img-center">
-        <img src="img/roughs.png" class="proj-img" alt="roughs">
+        <img id="myImg" src="img/roughs.png" class="proj-img" alt="roughs">
         <div id="myModal" class="modal">
 
           <!-- The Close Button -->
@@ -86,8 +86,10 @@
       <p class="med-type">Mockups</p>
       <div class="img-center">
         <img src="img/mockups.png" class="proj-img" alt="mockups">
+
+
       </div>
-      <p class=" body-text">I narrowed down my sketches to four layouts that had potential for further development, fine tuning them for the final compositions. In the first three layouts, I
+      <p class="body-text">I narrowed down my sketches to four layouts that had potential for further development, fine tuning them for the final compositions. In the first three layouts, I
         focused on clarity. The last layout took a more conceptual
         and expressive spin.
       </p>
@@ -97,7 +99,7 @@
     <div class="process-step">
       <p class="med-type">Final Layouts</p>
       <button class="accordion">Layout 1
-        <i class="fas fa-plus accordion-expand"></i>
+        <!-- <i class="fas fa-plus accordion-expand"></i> -->
         <!-- <i class="fas fa-chevron-down accordion-expand"></i> -->
       </button>
       <div class="panel">
@@ -111,7 +113,7 @@
       </div>
 
       <button class="accordion">Layout 2
-        <i class="fas fa-plus accordion-expand"></i>
+        <!-- <i class="fas fa-plus accordion-expand"></i> -->
         <!-- <i class="fas fa-chevron-down accordion-expand"></i> -->
       </button>
       <div class="panel">
@@ -125,7 +127,7 @@
       </div>
 
       <button class="accordion">Layout 3
-        <i class="fas fa-plus accordion-expand"></i>
+        <!-- <i class="fas fa-plus accordion-expand"></i> -->
         <!-- <i class="fas fa-chevron-down accordion-expand"></i> -->
       </button>
       <div class="panel">
@@ -139,7 +141,7 @@
       </div>
 
       <button class="accordion">Layout 4
-        <i class="fas fa-plus accordion-expand"></i>
+        <!-- <i class="fas fa-plus accordion-expand"></i> -->
         <!-- <i class="fas fa-chevron-down accordion-expand"></i> -->
       </button>
       <div class="panel">
@@ -162,11 +164,10 @@
       </div>
       <p class="body-text">Because of their vastly opposing concepts, I believe that the third and fourth layouts are the highlights of Typographic Space. On the one hand, I demonstrated the use of the 10 principles listed in my magazine in layout
         three, focusing on unobtrusiveness and challenging my attention to small typographic details. On the other hand, the last layout is the antithesis of Dieter Rams’ principles.</p>
-
-      <p class="body-text">My final presentation of the four distinct compositions were compiled into a magazine format that includes an introduction, a process documentation, and a design rationale. The magazine is printed on 100lb paper and bound
+      <p class="body-text">My final presentation of the four distinct compositions were compiled into a magazine format that includes an introduction, a process documentation, and a design rationale. The magazine is printed on 100lb paper and
+        bound
         using saddle
         stitch.</p>
-
       <p class="body-text">This academic project challenged my attention to detail, such as kerning, leading, and text alignment, carefully on each page of the publication. If I had another chance to redo this project, I would use another typeface
         for my magazine
         content, which may be riskier, but it can set apart my four compositions from the entire work.
@@ -176,6 +177,7 @@
 
   </div>
 
+  <!-- ACCORDION JS  -->
   <script>
     var acc = document.getElementsByClassName("accordion");
     var i;
@@ -192,6 +194,7 @@
           panel.style.display = "none";
         } else {
           panel.style.display = "block";
+
         }
       });
     }
@@ -224,6 +227,29 @@
         console.log('Not in the viewport... whomp whomp');
       }
     }, false);
+  </script>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+
+    var captionText = document.getElementById("caption");
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
   </script>
 
 </body>
