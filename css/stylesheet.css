@@ -58,7 +58,9 @@ body {
   border: 1px solid white;
 }
 
-/* TYPE ELEMENTS */
+/* END OF STYLEGUIDE STYLING */
+/* TYPE ELEMENT STYLING */
+/* titles: large serif text */
 .big-type {
   font-size: 6em;
   color: white;
@@ -66,19 +68,22 @@ body {
   margin: 0;
 }
 
+/* sub-headings: yellow serif type */
 .med-type {
   /* font-family: "Maison Neue Mono", monospace; */
   font-size: 2em;
   color: #ffc83e;
 }
 
-.body-type {
+/* body: white mono type */
+.body-text {
   color: white;
   font-family: Maison Neue Mono, monospace;
   font-size: 10pt;
   line-height: 1.5em;
 }
 
+/* lists: white mono type */
 .ordered-list {
   color: white;
   font-family: Maison Neue Mono, monospace;
@@ -86,6 +91,7 @@ body {
   line-height: 1.5em;
 }
 
+/* changes color of intro text */
 .yellow-text {
   color: #fff;
   opacity: 0.7;
@@ -339,14 +345,17 @@ textarea:hover, textarea:focus {
   color: #ffc83e;
 }
 
+/* homepage */
 #logo {
   display: inline-block;
+  text-align: center;
   font-size: 22px;
   margin-top: 10px;
   margin-left: 20px;
   color: white;
 }
 
+/* hamburger placement */
 #navbar-toggle {
   position: absolute;
   top: 10px;
@@ -362,6 +371,15 @@ textarea:hover, textarea:focus {
   color: #ffc83e;
 }
 
+/*@media (max-width: 768px) {
+  #logo {
+    text-align: center;
+  }
+
+  #main-nav {
+    display: hidden;
+  }
+} */
 @media (min-width: 768px) {
   .navbar {
     display: flex;
